@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { defaultImages } from "../layout";
+import { defaultImages } from "../config";
 
 export default function AboutPage() {
   const stats = [
