@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --gold-50: #fff9e6;
+  --gold-100: #fff0c1;
+  --gold-200: #ffe299;
+  --gold-300: #ffd470;
+  --gold-400: #daa520;
+  --gold-500: #b8860b;
+  --gold-600: #996c15;
+  --gold-700: #7a541e;
+  --gold-800: #5c3d1c;
+  --gold-900: #3e2919;
+  
+  /* Custom Gradients */
+  --gold-gradient-1: linear-gradient(135deg, var(--gold-400), var(--gold-500));
+  --gold-gradient-2: linear-gradient(45deg, var(--gold-300), var(--gold-500));
+  --gold-gradient-hover: linear-gradient(135deg, var(--gold-500), var(--gold-600));
+  --gold-shimmer: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(255,255,255,0.2) 20%, 
+    rgba(255,255,255,0.3) 50%, 
+    rgba(255,255,255,0.2) 80%, 
+    transparent 100%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-gray-900;
+  }
+}
+
+@layer components {
+  .btn-gold {
+    @apply relative overflow-hidden bg-gradient-to-r from-[var(--gold-400)] to-[var(--gold-500)] hover:from-[var(--gold-500)] hover:to-[var(--gold-600)] text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
+  }
+  
+  .btn-outline-gold {
+    @apply relative overflow-hidden border-2 border-[var(--gold-400)] text-[var(--gold-400)] hover:text-white transition-all duration-300;
+  }
+
+  .btn-outline-gold::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-[var(--gold-400)] to-[var(--gold-500)] -z-10 transform scale-x-0 origin-left transition-transform duration-300;
+  }
+
+  .btn-outline-gold:hover::before {
+    @apply scale-x-100;
+  }
+
+  .badge-gold {
+    @apply bg-gradient-to-r from-[var(--gold-400)] to-[var(--gold-500)] animate-shimmer bg-[length:200%_100%];
+  }
+
+  .gold-shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .gold-shimmer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: var(--gold-shimmer);
+    animation: shimmer 2s infinite;
+    transform: skewX(-20deg);
+  }
+
+  .slide-in {
+    animation: slideIn 0.5s ease-out forwards;
+  }
+
+  .fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  .scale-in {
+    animation: scaleIn 0.3s ease-out forwards;
+  }
+}
+
+@keyframes shimmer {
+  100% {
+    left: 200%;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Custom Animations */
+.animate-shimmer {
+  animation: backgroundShimmer 2s linear infinite;
+}
+
+@keyframes backgroundShimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
