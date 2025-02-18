@@ -8,31 +8,34 @@ export const defaultImages = {
   // Room Images
   room: "/images/gallery/Double room/20231215_095541.jpg",
   deluxeRoom: "/images/gallery/Double room/20231215_095529.jpg",
-  familyRoom: "/images/gallery/Family room/20240213_095227.jpg",
-  suite: "/images/gallery/Family room/20240213_095156.jpg",
+  familyRoom: "/images/gallery/Family room/20231215_095529.jpg",
+  suite: "/images/gallery/Suite/20231215_095529.jpg",
   
   // Cabana Images
-  cabana1: "/images/gallery/Cabana/IMG-20240504-WA0012.jpg",
-  cabana2: "/images/gallery/Cabana/IMG-20240504-WA0013.jpg",
-  cabana3: "/images/gallery/Cabana/IMG-20240707-WA0015.jpg",
+  cabana1: "/images/gallery/Cabana/20231215_095529.jpg",
+  cabana2: "/images/gallery/Cabana/20231215_095541.jpg",
+  cabana3: "/images/gallery/Cabana/20231215_095553.jpg",
   
   // Lobby Images
-  lobby1: "/images/gallery/Lobby/IMG-20231130-WA0014.jpg",
-  lobby2: "/images/gallery/Lobby/IMG-20231130-WA0015.jpg",
-  lobby3: "/images/gallery/Lobby/IMG-20231130-WA0026.jpg",
+  lobby1: "/images/gallery/Lobby/20231215_095529.jpg",
+  lobby2: "/images/gallery/Lobby/20231215_095541.jpg",
   
-  // Additional Environment Images
-  environment1: "/images/gallery/Environment/IMG-20231130-WA0017.jpg",
-  environment2: "/images/gallery/Environment/IMG-20231130-WA0043.jpg",
-  environment3: "/images/gallery/Environment/IMG-20231130-WA0047.jpg",
+  // Restaurant Images
+  restaurant1: "/images/gallery/Restaurant/20231215_095529.jpg",
+  restaurant2: "/images/gallery/Restaurant/20231215_095541.jpg",
   
-  // Legacy mappings for compatibility (using new images)
-  restaurant1: "/images/gallery/Environment/20231223_220601.jpg",
-  restaurant2: "/images/gallery/Environment/20231223_220631.jpg",
-  restaurant3: "/images/gallery/Environment/20231225_194050.jpg",
-  pool: "/images/gallery/Environment/20240122_202353.jpg",
-  spa: "/images/gallery/Environment/20240507_120843.jpg",
-  gym: "/images/gallery/Environment/20240509_082224.jpg",
-  presidentialSuite: "/images/gallery/Family room/IMG-20231130-WA0057.jpg",
-  businessCenter: "/images/gallery/Lobby/IMG-20231130-WA0026.jpg"
+  // Pool Images
+  pool1: "/images/gallery/Pool/20231215_095529.jpg",
+  pool2: "/images/gallery/Pool/20231215_095541.jpg",
+  
+  // Spa Images
+  spa1: "/images/gallery/Spa/20231215_095529.jpg",
+  spa2: "/images/gallery/Spa/20231215_095541.jpg",
+  
+  // Gym Images
+  gym1: "/images/gallery/Gym/20231215_095529.jpg",
+  gym2: "/images/gallery/Gym/20231215_095541.jpg",
+  
+  // Business Center Images
+  businessCenter: "/images/gallery/Business/20231215_095529.jpg"
 }; 

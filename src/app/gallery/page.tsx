@@ -14,10 +14,7 @@ export default function GalleryPage() {
       images: [
         { src: defaultImages.hotelExterior, alt: "Hotel Exterior View" },
         { src: defaultImages.hotelNight, alt: "Hotel at Night" },
-        { src: defaultImages.hotelView, alt: "Scenic Hotel View" },
-        { src: defaultImages.environment1, alt: "Hotel Environment" },
-        { src: defaultImages.environment2, alt: "Hotel Surroundings" },
-        { src: defaultImages.environment3, alt: "Hotel Landscape" },
+        { src: defaultImages.hotelView, alt: "Scenic Hotel View" }
       ]
     },
     {
@@ -27,8 +24,7 @@ export default function GalleryPage() {
         { src: defaultImages.room, alt: "Standard Room" },
         { src: defaultImages.deluxeRoom, alt: "Deluxe Room" },
         { src: defaultImages.familyRoom, alt: "Family Room" },
-        { src: defaultImages.suite, alt: "Suite Room" },
-        { src: defaultImages.presidentialSuite, alt: "Presidential Suite" },
+        { src: defaultImages.suite, alt: "Suite Room" }
       ]
     },
     {
@@ -37,7 +33,7 @@ export default function GalleryPage() {
       images: [
         { src: defaultImages.cabana1, alt: "Cabana View 1" },
         { src: defaultImages.cabana2, alt: "Cabana View 2" },
-        { src: defaultImages.cabana3, alt: "Cabana View 3" },
+        { src: defaultImages.cabana3, alt: "Cabana View 3" }
       ]
     },
     {
@@ -45,22 +41,23 @@ export default function GalleryPage() {
       description: "Explore our welcoming spaces",
       images: [
         { src: defaultImages.lobby1, alt: "Hotel Lobby 1" },
-        { src: defaultImages.lobby2, alt: "Hotel Lobby 2" },
-        { src: defaultImages.lobby3, alt: "Hotel Lobby 3" },
+        { src: defaultImages.lobby2, alt: "Hotel Lobby 2" }
       ]
     },
     {
       title: "Amenities",
       description: "Enjoy our premium facilities",
       images: [
-        { src: defaultImages.pool, alt: "Swimming Pool" },
-        { src: defaultImages.spa, alt: "Spa" },
-        { src: defaultImages.gym, alt: "Gym" },
+        { src: defaultImages.pool1, alt: "Swimming Pool 1" },
+        { src: defaultImages.pool2, alt: "Swimming Pool 2" },
+        { src: defaultImages.spa1, alt: "Spa 1" },
+        { src: defaultImages.spa2, alt: "Spa 2" },
+        { src: defaultImages.gym1, alt: "Gym 1" },
+        { src: defaultImages.gym2, alt: "Gym 2" },
         { src: defaultImages.restaurant1, alt: "Restaurant View 1" },
-        { src: defaultImages.restaurant2, alt: "Restaurant View 2" },
-        { src: defaultImages.restaurant3, alt: "Restaurant View 3" },
+        { src: defaultImages.restaurant2, alt: "Restaurant View 2" }
       ]
-    },
+    }
   ];
 
   return (

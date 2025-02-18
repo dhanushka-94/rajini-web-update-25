@@ -130,25 +130,25 @@ export default function Home() {
             >
               {slides.map((slide, index) => (
                 <article key={index} className="relative min-w-full h-full">
-        <Image
+                  <Image
                     src={slide.image}
                     alt={slide.alt}
                     fill
                     className="object-cover"
-          priority
-        />
+                    priority
+                  />
                   <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/20" />
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-center text-white">
                       <h1 className="text-5xl md:text-7xl font-bold mb-6 slide-in">{slide.title}</h1>
                       <p className="text-xl md:text-2xl mb-8 slide-in" style={{ animationDelay: '0.2s' }}>{slide.subtitle}</p>
-                      <a 
+                      <Link 
                         href={slide.buttonLink}
                         className="btn-outline-gold px-8 py-3 rounded-md text-lg font-semibold inline-block slide-in gold-shimmer"
                         style={{ animationDelay: '0.4s' }}
                       >
                         {slide.buttonText}
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </article>
@@ -156,35 +156,37 @@ export default function Home() {
             </div>
 
             {/* Navigation Arrows */}
-            <button 
-              className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center rounded-full bg-black/30 text-white hover:bg-gradient-to-r hover:from-[var(--gold-400)] hover:to-[var(--gold-500)] transition-all duration-300"
+            <button
               onClick={prevSlide}
+              className="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-[var(--gold-400)] transition-colors"
+              aria-label="Previous slide"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
+              <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
             </button>
-            <button 
-              className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center rounded-full bg-black/30 text-white hover:bg-gradient-to-r hover:from-[var(--gold-400)] hover:to-[var(--gold-500)] transition-all duration-300"
+            <button
               onClick={nextSlide}
+              className="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-[var(--gold-400)] transition-colors"
+              aria-label="Next slide"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+              <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </button>
 
-            {/* Dots Navigation */}
+            {/* Slide Indicators */}
             <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-2">
               {slides.map((_, index) => (
                 <button
                   key={index}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    currentSlide === index 
-                      ? "bg-gradient-to-r from-[var(--gold-400)] to-[var(--gold-500)] scale-125" 
-                      : "bg-white/50 hover:bg-white/75"
-                  }`}
                   onClick={() => goToSlide(index)}
-                ></button>
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    currentSlide === index ? 'bg-[var(--gold-400)] w-6' : 'bg-white/50 hover:bg-white'
+                  }`}
+                  aria-label={`Go to slide ${index + 1}`}
+                  aria-current={currentSlide === index ? 'true' : 'false'}
+                />
               ))}
             </div>
           </div>
@@ -575,7 +577,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="relative h-64 overflow-hidden rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
-          <Image
+                  <Image
                     src={defaultImages.restaurant2}
                     alt="Dining Experience"
                     fill
@@ -690,7 +692,7 @@ export default function Home() {
                 Book Your Peaceful Retreat
               </Link>
             </div>
-    </div>
+          </div>
         </section>
       </main>
     </>

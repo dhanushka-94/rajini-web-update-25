@@ -9,29 +9,6 @@ export default function AboutPage() {
     { label: "Awards Won", value: "100+" },
   ];
 
-  const team = [
-    {
-      name: "John Smith",
-      position: "General Manager",
-      image: defaultImages.team1,
-    },
-    {
-      name: "Sarah Johnson",
-      position: "Executive Chef",
-      image: defaultImages.team2,
-    },
-    {
-      name: "Michael Brown",
-      position: "Guest Relations Manager",
-      image: defaultImages.team3,
-    },
-    {
-      name: "Emily Davis",
-      position: "Spa Director",
-      image: defaultImages.team4,
-    },
-  ];
-
   return (
     <div className="min-h-screen py-20">
       <div className="container mx-auto px-4">
@@ -47,7 +24,7 @@ export default function AboutPage() {
         <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
           <div className="relative h-[400px] rounded-lg overflow-hidden">
             <Image
-              src="/hotel-history.jpg"
+              src={defaultImages.hotelExterior}
               alt="Hotel History"
               fill
               className="object-cover"
@@ -79,27 +56,6 @@ export default function AboutPage() {
               <div key={index} className="text-center">
                 <div className="text-4xl font-bold text-gray-900 mb-2">{stat.value}</div>
                 <div className="text-gray-600">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Leadership Team */}
-        <div className="mb-20">
-          <h2 className="text-3xl font-bold text-center mb-12">Our Leadership Team</h2>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {team.map((member, index) => (
-              <div key={index} className="text-center">
-                <div className="relative w-48 h-48 mx-auto mb-4 rounded-full overflow-hidden">
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <h3 className="text-xl font-bold mb-1">{member.name}</h3>
-                <p className="text-gray-600">{member.position}</p>
               </div>
             ))}
           </div>
