@@ -80,7 +80,7 @@ export default function AmenitiesPage() {
       id: 1,
       name: "Swimming Pool",
       description: "Our infinity pool offers breathtaking views of the surroundings",
-      image: defaultImages.pool,
+      image: defaultImages.pool1,
       hours: "6:00 AM - 10:00 PM",
     },
     {

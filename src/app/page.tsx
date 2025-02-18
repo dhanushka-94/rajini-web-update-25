@@ -280,7 +280,7 @@ export default function Home() {
                     From LKR 25,000.00
                   </div>
                   <Image
-                    src={defaultImages.presidentialSuite}
+                    src={defaultImages.suite}
                     alt="Super Delux Room"
                     fill
                     className="object-cover"
@@ -520,7 +520,7 @@ export default function Home() {
                 </div>
                 <div className="relative h-64 overflow-hidden rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
                   <Image
-                    src={defaultImages.pool}
+                    src={defaultImages.pool1}
                     alt="Swimming Pool"
                     fill
                     className="object-cover"
@@ -536,7 +536,7 @@ export default function Home() {
               <div className="grid gap-4">
                 <div className="relative h-64 overflow-hidden rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
                   <Image
-                    src={defaultImages.spa}
+                    src={defaultImages.spa1}
                     alt="Spa & Wellness"
                     fill
                     className="object-cover"
@@ -550,7 +550,7 @@ export default function Home() {
                 <div className="relative h-96 overflow-hidden rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
                   <Image
                     src={defaultImages.suite}
-                    alt="Luxury Suite"
+                    alt="Presidential Suite"
                     fill
                     className="object-cover"
                   />
@@ -565,7 +565,7 @@ export default function Home() {
               <div className="grid gap-4">
                 <div className="relative h-96 overflow-hidden rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
                   <Image
-                    src={defaultImages.presidentialSuite}
+                    src={defaultImages.suite}
                     alt="Presidential Suite"
                     fill
                     className="object-cover"
