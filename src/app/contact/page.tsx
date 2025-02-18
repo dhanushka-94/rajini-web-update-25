@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import { defaultImages } from "../config";
+import Map from "../components/Map";
 
 export default function ContactPage() {
   const contactInfo = {
@@ -10,12 +13,14 @@ export default function ContactPage() {
       country: "Sri Lanka"
     },
     phone: {
-      reception: "+94 76 281 0000",
-      reservations: "+94 76 281 0001"
+      reception: "+94 76 281 0000"
     },
     email: {
-      general: "info@rajinihotels.com",
-      reservations: "reservations@rajinihotels.com"
+      general: "info@rajinihotels.com"
+    },
+    location: {
+      lat: 6.300069720777323,
+      lng: 81.28802054738836
     }
   };
 
@@ -136,8 +141,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold mb-2 text-[var(--gold-400)]">Phone</h3>
                     <p className="text-gray-600">
-                      Reception: <a href={`tel:${contactInfo.phone.reception}`} className="hover:text-[var(--gold-400)] transition-colors">{contactInfo.phone.reception}</a><br />
-                      Reservations: <a href={`tel:${contactInfo.phone.reservations}`} className="hover:text-[var(--gold-400)] transition-colors">{contactInfo.phone.reservations}</a>
+                      Reception: <a href={`tel:${contactInfo.phone.reception}`} className="hover:text-[var(--gold-400)] transition-colors">{contactInfo.phone.reception}</a>
                     </p>
                   </div>
                 </div>
@@ -149,8 +153,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold mb-2 text-[var(--gold-400)]">Email</h3>
                     <p className="text-gray-600">
-                      General: <a href={`mailto:${contactInfo.email.general}`} className="hover:text-[var(--gold-400)] transition-colors">{contactInfo.email.general}</a><br />
-                      Reservations: <a href={`mailto:${contactInfo.email.reservations}`} className="hover:text-[var(--gold-400)] transition-colors">{contactInfo.email.reservations}</a>
+                      General: <a href={`mailto:${contactInfo.email.general}`} className="hover:text-[var(--gold-400)] transition-colors">{contactInfo.email.general}</a>
                     </p>
                   </div>
                 </div>
@@ -159,12 +162,11 @@ export default function ContactPage() {
 
             <div className="bg-white rounded-lg shadow-lg p-8">
               <h2 className="text-2xl font-bold mb-6 text-[var(--gold-400)]">Getting Here</h2>
-              <div className="relative h-64 rounded-lg overflow-hidden mb-4">
-                <Image
-                  src={defaultImages.map}
-                  alt="Hotel Location Map"
-                  fill
-                  className="object-cover"
+              <div className="relative h-[400px] rounded-lg overflow-hidden mb-4">
+                <Map 
+                  center={contactInfo.location}
+                  zoom={15}
+                  className="w-full h-full rounded-lg"
                 />
               </div>
               <div>
@@ -173,6 +175,14 @@ export default function ContactPage() {
                   Our hotel is situated in the serene surroundings of Tissamaharama, offering a peaceful retreat by the waters.
                   We provide complimentary airport transfers for our guests with advance booking.
                 </p>
+                <a 
+                  href={`https://www.openstreetmap.org/directions?from=&to=${contactInfo.location.lat}%2C${contactInfo.location.lng}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block mt-4 btn-gold px-6 py-2 rounded-md"
+                >
+                  Get Directions
+                </a>
               </div>
             </div>
           </div>

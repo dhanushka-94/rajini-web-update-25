@@ -20,34 +20,6 @@ export default function OffersPage() {
     },
     {
       id: 2,
-      title: "Weekend Getaway",
-      description: "Enjoy a luxurious weekend stay with spa credits and dining discounts. Perfect for couples seeking a romantic escape.",
-      validUntil: "2024-12-31",
-      perks: ["$100 Spa Credit", "20% Off Dining", "Late Checkout"],
-      image: defaultImages.spa,
-      code: "WEEKEND",
-      terms: [
-        "Valid for Friday to Sunday stays",
-        "Minimum 2 nights stay",
-        "Subject to availability",
-      ],
-    },
-    {
-      id: 3,
-      title: "Family Package",
-      description: "Create unforgettable memories with our family package including connecting rooms, kids' activities, and family dining benefits.",
-      validUntil: "2024-12-31",
-      perks: ["50% Off Second Room", "Kids Eat Free", "Family Activities"],
-      image: defaultImages.deluxeRoom,
-      code: "FAMILY",
-      terms: [
-        "Valid for families with children under 12",
-        "Minimum 3 nights stay",
-        "Subject to availability",
-      ],
-    },
-    {
-      id: 4,
       title: "Honeymoon Special",
       description: "Begin your journey together with our romantic honeymoon package featuring luxury suite accommodation and special amenities.",
       validUntil: "2024-12-31",
@@ -59,18 +31,18 @@ export default function OffersPage() {
         "Minimum 4 nights stay",
         "Marriage certificate required",
       ],
-    },
+    }
   ];
 
   return (
     <div className="min-h-screen py-20">
       <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-center mb-4">Special Offers</h1>
+        <h1 className="text-4xl font-bold text-center mb-4 text-transparent bg-clip-text bg-gradient-to-r from-[var(--gold-400)] to-[var(--gold-500)]">Special Offers</h1>
         <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
           Discover our exclusive offers and packages designed to make your stay even more special.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {offers.map((offer) => (
             <div key={offer.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
               <div className="relative h-64">
@@ -113,7 +85,7 @@ export default function OffersPage() {
                   </ul>
                 </div>
 
-                <div className="flex items-center justify-between mt-6 pt-6 border-t border-[var(--gold-100)]">
+                <div className="flex items-center justify-between mt-6">
                   <div>
                     <p className="text-sm text-gray-500">Promo Code</p>
                     <p className="font-mono font-bold text-lg text-[var(--gold-400)]">{offer.code}</p>
