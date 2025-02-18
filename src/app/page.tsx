@@ -391,7 +391,7 @@ export default function Home() {
               <article className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow">
                 <div className="relative h-48">
                   <Image
-                    src={defaultImages.spa}
+                    src={defaultImages.spa1}
                     alt="Weekend Getaway"
                     fill
                     className="object-cover"

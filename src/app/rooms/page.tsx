@@ -50,7 +50,7 @@ export default function RoomsPage() {
       name: "Super Delux Room",
       description: "Premium rooms offering the ultimate luxury experience",
       basePrice: 25000,
-      image: defaultImages.presidentialSuite,
+      image: defaultImages.suite,
       amenities: ["Lake View", "AC", "TV", "Mini Fridge", "Private Locker", "Pool Access"],
       moreAmenities: 3,
       rates: {
