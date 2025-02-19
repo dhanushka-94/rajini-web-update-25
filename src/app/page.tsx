@@ -111,6 +111,16 @@ export default function Home() {
                 "@type": "LocationFeatureSpecification",
                 "name": "Peaceful Environment",
                 "value": true
+              },
+              {
+                "@type": "LocationFeatureSpecification",
+                "name": "Swimming Pool",
+                "value": true
+              },
+              {
+                "@type": "LocationFeatureSpecification",
+                "name": "Restaurant",
+                "value": true
               }
             ]
           }
@@ -333,20 +343,6 @@ export default function Home() {
                 </div>
                 <h3 className="font-semibold mb-2 text-[var(--gold-400)]">Fine Dining</h3>
                 <p className="text-gray-600">World-class restaurants</p>
-              </div>
-              <div role="listitem" className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 bg-[var(--gold-50)] rounded-full flex items-center justify-center text-[var(--gold-400)]">
-                  <span className="text-2xl">💆‍♀️</span>
-                </div>
-                <h3 className="font-semibold mb-2 text-[var(--gold-400)]">Spa & Wellness</h3>
-                <p className="text-gray-600">Luxury spa treatments</p>
-              </div>
-              <div role="listitem" className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 bg-[var(--gold-50)] rounded-full flex items-center justify-center text-[var(--gold-400)]">
-                  <span className="text-2xl">🏋️‍♂️</span>
-                </div>
-                <h3 className="font-semibold mb-2 text-[var(--gold-400)]">Fitness Center</h3>
-                <p className="text-gray-600">24/7 gym access</p>
               </div>
             </div>
           </div>
