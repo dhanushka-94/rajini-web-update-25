@@ -7,66 +7,90 @@ export default function RoomsPage() {
       id: 1,
       name: "Chalets",
       description: "Cozy chalets with scenic views and essential amenities",
-      basePrice: 22000,
+      basePrice: 62,
       image: defaultImages.deluxeRoom,
       amenities: ["Lake View", "AC", "TV", "Mini Fridge", "Private Locker", "Pool Access"],
       moreAmenities: 3,
       rates: {
-        twoPersons: {
-          roomOnly: { price: 22000, label: "Room Only" },
-          bedAndBreakfast: { price: 24000, label: "Bed & Breakfast" },
-          halfBoard: { price: 26000, label: "Half Board" },
-          fullBoard: { price: 28000, label: "Full Board" },
+        onePersons: {
+          roomOnly: { price: 62, label: "Room Only" },
+          bedAndBreakfast: { price: 72, label: "Bed & Breakfast" },
+          halfBoard: { price: 82, label: "Half Board" },
+          fullBoard: { price: 92, label: "Full Board" },
         },
-        extraBed: { price: 4000, label: "Extra Bed" }
+        twoPersons: {
+          roomOnly: { price: 77, label: "Room Only" },
+          bedAndBreakfast: { price: 87, label: "Bed & Breakfast" },
+          halfBoard: { price: 97, label: "Half Board" },
+          fullBoard: { price: 107, label: "Full Board" },
+        },
+        threePersons: {
+          roomOnly: { price: 92, label: "Room Only" },
+          bedAndBreakfast: { price: 102, label: "Bed & Breakfast" },
+          halfBoard: { price: 112, label: "Half Board" },
+          fullBoard: { price: 122, label: "Full Board" },
+        },
+        extraBed: { price: 15, label: "Extra Bed" }
       }
     },
     {
       id: 2,
       name: "Delux Room",
       description: "Spacious rooms with modern amenities and lake views",
-      basePrice: 23000,
+      basePrice: 72,
       image: defaultImages.suite,
       amenities: ["Lake View", "AC", "TV", "Mini Fridge", "Private Locker", "Pool Access"],
       moreAmenities: 3,
       rates: {
+        onePersons: {
+          roomOnly: { price: 72, label: "Room Only" },
+          bedAndBreakfast: { price: 82, label: "Bed & Breakfast" },
+          halfBoard: { price: 92, label: "Half Board" },
+          fullBoard: { price: 102, label: "Full Board" },
+        },
         twoPersons: {
-          roomOnly: { price: 23000, label: "Room Only" },
-          bedAndBreakfast: { price: 26000, label: "Bed & Breakfast" },
-          halfBoard: { price: 29000, label: "Half Board" },
-          fullBoard: { price: 32000, label: "Full Board" },
+          roomOnly: { price: 87, label: "Room Only" },
+          bedAndBreakfast: { price: 97, label: "Bed & Breakfast" },
+          halfBoard: { price: 107, label: "Half Board" },
+          fullBoard: { price: 117, label: "Full Board" },
         },
         threePersons: {
-          roomOnly: { price: 26000, label: "Room Only" },
-          bedAndBreakfast: { price: 29000, label: "Bed & Breakfast" },
-          halfBoard: { price: 33000, label: "Half Board" },
-          fullBoard: { price: 38000, label: "Full Board" },
+          roomOnly: { price: 102, label: "Room Only" },
+          bedAndBreakfast: { price: 112, label: "Bed & Breakfast" },
+          halfBoard: { price: 122, label: "Half Board" },
+          fullBoard: { price: 132, label: "Full Board" },
         },
-        extraBed: { price: 4000, label: "Extra Bed" }
+        extraBed: { price: 15, label: "Extra Bed" }
       }
     },
     {
       id: 3,
       name: "Super Delux Room",
       description: "Premium rooms offering the ultimate luxury experience",
-      basePrice: 25000,
+      basePrice: 82,
       image: defaultImages.suite,
       amenities: ["Lake View", "AC", "TV", "Mini Fridge", "Private Locker", "Pool Access"],
       moreAmenities: 3,
       rates: {
+        onePersons: {
+          roomOnly: { price: 82, label: "Room Only" },
+          bedAndBreakfast: { price: 92, label: "Bed & Breakfast" },
+          halfBoard: { price: 102, label: "Half Board" },
+          fullBoard: { price: 112, label: "Full Board" },
+        },
         twoPersons: {
-          roomOnly: { price: 25000, label: "Room Only" },
-          bedAndBreakfast: { price: 28000, label: "Bed & Breakfast" },
-          halfBoard: { price: 31000, label: "Half Board" },
-          fullBoard: { price: 34000, label: "Full Board" },
+          roomOnly: { price: 97, label: "Room Only" },
+          bedAndBreakfast: { price: 107, label: "Bed & Breakfast" },
+          halfBoard: { price: 117, label: "Half Board" },
+          fullBoard: { price: 127, label: "Full Board" },
         },
         threePersons: {
-          roomOnly: { price: 28000, label: "Room Only" },
-          bedAndBreakfast: { price: 31000, label: "Bed & Breakfast" },
-          halfBoard: { price: 34000, label: "Half Board" },
-          fullBoard: { price: 37000, label: "Full Board" },
+          roomOnly: { price: 112, label: "Room Only" },
+          bedAndBreakfast: { price: 122, label: "Bed & Breakfast" },
+          halfBoard: { price: 132, label: "Half Board" },
+          fullBoard: { price: 142, label: "Full Board" },
         },
-        extraBed: { price: 4000, label: "Extra Bed" }
+        extraBed: { price: 15, label: "Extra Bed" }
       }
     },
   ];
@@ -87,7 +111,7 @@ export default function RoomsPage() {
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="relative h-64 md:h-full">
                   <div className="absolute top-4 left-4 bg-[var(--gold-400)] text-white px-4 py-2 rounded-full font-semibold z-10">
-                    From LKR {room.basePrice.toLocaleString()}.00
+                    From USD ${room.basePrice}
                   </div>
                   <Image
                     src={room.image}
@@ -114,6 +138,19 @@ export default function RoomsPage() {
                     )}
                   </div>
 
+                  {/* Rates for 1 Person */}
+                  <div className="mb-6">
+                    <h3 className="text-lg font-semibold mb-3 text-[var(--gold-400)]">1 Person</h3>
+                    <div className="grid grid-cols-2 gap-4">
+                      {Object.entries(room.rates.onePersons || {}).map(([key, rate]) => (
+                        <div key={key}>
+                          <p className="text-sm text-gray-500">{rate.label}</p>
+                          <p className="font-semibold">USD ${rate.price}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
                   {/* Rates for 2 Persons */}
                   <div className="mb-6">
                     <h3 className="text-lg font-semibold mb-3 text-[var(--gold-400)]">2 People</h3>
@@ -121,7 +158,7 @@ export default function RoomsPage() {
                       {Object.entries(room.rates.twoPersons).map(([key, rate]) => (
                         <div key={key}>
                           <p className="text-sm text-gray-500">{rate.label}</p>
-                          <p className="font-semibold">LKR {rate.price.toLocaleString()}.00</p>
+                          <p className="font-semibold">USD ${rate.price}</p>
                         </div>
                       ))}
                     </div>
@@ -135,7 +172,7 @@ export default function RoomsPage() {
                         {Object.entries(room.rates.threePersons).map(([key, rate]) => (
                           <div key={key}>
                             <p className="text-sm text-gray-500">{rate.label}</p>
-                            <p className="font-semibold">LKR {rate.price.toLocaleString()}.00</p>
+                            <p className="font-semibold">USD ${rate.price}</p>
                           </div>
                         ))}
                       </div>
@@ -146,7 +183,7 @@ export default function RoomsPage() {
                   <div className="mb-6">
                     <div className="flex items-center justify-between">
                       <p className="text-sm text-gray-500">{room.rates.extraBed.label}</p>
-                      <p className="font-semibold">LKR {room.rates.extraBed.price.toLocaleString()}.00</p>
+                      <p className="font-semibold">USD ${room.rates.extraBed.price}</p>
                     </div>
                   </div>
 

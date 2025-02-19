@@ -213,7 +213,7 @@ export default function Home() {
               <article className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow">
                 <div className="relative h-64">
                   <div className="absolute top-4 left-4 bg-[var(--gold-400)] text-white px-4 py-2 rounded-full font-semibold z-10">
-                    From LKR 22,000.00
+                    From USD $62
                   </div>
                   <Image
                     src={defaultImages.deluxeRoom}
@@ -233,11 +233,11 @@ export default function Home() {
                   <div className="flex items-center justify-between mb-4">
                     <div>
                       <p className="text-sm text-gray-500">Room Only</p>
-                      <p className="text-lg font-bold text-[var(--gold-500)]">LKR 22,000.00</p>
+                      <p className="text-lg font-bold text-[var(--gold-500)]">USD $62</p>
                     </div>
                     <div>
                       <p className="text-sm text-gray-500">Full Board</p>
-                      <p className="text-lg font-bold text-[var(--gold-500)]">LKR 28,000.00</p>
+                      <p className="text-lg font-bold text-[var(--gold-500)]">USD $92</p>
                     </div>
                   </div>
                   <button className="w-full btn-gold py-2 rounded-md">
@@ -250,7 +250,7 @@ export default function Home() {
               <article className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow">
                 <div className="relative h-64">
                   <div className="absolute top-4 left-4 bg-[var(--gold-400)] text-white px-4 py-2 rounded-full font-semibold z-10">
-                    From LKR 23,000.00
+                    From USD $72
                   </div>
                   <Image
                     src={defaultImages.suite}
@@ -270,11 +270,11 @@ export default function Home() {
                   <div className="flex items-center justify-between mb-4">
                     <div>
                       <p className="text-sm text-gray-500">Room Only</p>
-                      <p className="text-lg font-bold text-[var(--gold-500)]">LKR 23,000.00</p>
+                      <p className="text-lg font-bold text-[var(--gold-500)]">USD $72</p>
                     </div>
                     <div>
                       <p className="text-sm text-gray-500">Full Board</p>
-                      <p className="text-lg font-bold text-[var(--gold-500)]">LKR 32,000.00</p>
+                      <p className="text-lg font-bold text-[var(--gold-500)]">USD $102</p>
                     </div>
                   </div>
                   <button className="w-full btn-gold py-2 rounded-md">
@@ -287,7 +287,7 @@ export default function Home() {
               <article className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow">
                 <div className="relative h-64">
                   <div className="absolute top-4 left-4 bg-[var(--gold-400)] text-white px-4 py-2 rounded-full font-semibold z-10">
-                    From LKR 25,000.00
+                    From USD $82
                   </div>
                   <Image
                     src={defaultImages.suite}
@@ -307,11 +307,11 @@ export default function Home() {
                   <div className="flex items-center justify-between mb-4">
                     <div>
                       <p className="text-sm text-gray-500">Room Only</p>
-                      <p className="text-lg font-bold text-[var(--gold-500)]">LKR 25,000.00</p>
+                      <p className="text-lg font-bold text-[var(--gold-500)]">USD $82</p>
                     </div>
                     <div>
                       <p className="text-sm text-gray-500">Full Board</p>
-                      <p className="text-lg font-bold text-[var(--gold-500)]">LKR 34,000.00</p>
+                      <p className="text-lg font-bold text-[var(--gold-500)]">USD $112</p>
                     </div>
                   </div>
                   <button className="w-full btn-gold py-2 rounded-md">
