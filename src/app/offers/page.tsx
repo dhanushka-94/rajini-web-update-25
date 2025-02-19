@@ -2,108 +2,34 @@ import Image from "next/image";
 import { defaultImages } from "../config";
 
 export default function OffersPage() {
-  const offers = [
-    {
-      id: 1,
-      title: "Early Bird Special",
-      description: "Book 60 days in advance and save up to 25% on your stay. Includes complimentary breakfast and airport transfer.",
-      validUntil: "2024-12-31",
-      discount: "25%",
-      image: defaultImages.room,
-      code: "EARLY25",
-      terms: [
-        "Must book 60 days in advance",
-        "Full prepayment required",
-        "Non-refundable",
-        "Subject to availability",
-      ],
-    },
-    {
-      id: 2,
-      title: "Honeymoon Special",
-      description: "Begin your journey together with our romantic honeymoon package featuring luxury suite accommodation and special amenities.",
-      validUntil: "2024-12-31",
-      perks: ["Champagne on Arrival", "Romantic Dinner", "Spa Treatment"],
-      image: defaultImages.suite,
-      code: "HONEY",
-      terms: [
-        "Valid within 6 months of wedding date",
-        "Minimum 4 nights stay",
-        "Marriage certificate required",
-      ],
-    }
-  ];
-
   return (
     <div className="min-h-screen py-20">
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold text-center mb-4 text-transparent bg-clip-text bg-gradient-to-r from-[var(--gold-400)] to-[var(--gold-500)]">Special Offers</h1>
         <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-          Discover our exclusive offers and packages designed to make your stay even more special.
+          Stay tuned for our upcoming special offers and exclusive deals.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {offers.map((offer) => (
-            <div key={offer.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div className="relative h-64">
-                <Image
-                  src={offer.image}
-                  alt={offer.title}
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute top-4 right-4 badge-gold px-4 py-2 rounded-full font-semibold">
-                  {offer.discount || "Special Offer"}
-                </div>
-              </div>
-              <div className="p-6">
-                <h2 className="text-2xl font-bold mb-2 text-[var(--gold-400)]">{offer.title}</h2>
-                <p className="text-gray-600 mb-4">{offer.description}</p>
-
-                {offer.perks && (
-                  <div className="mb-4">
-                    <h3 className="font-semibold mb-2 text-[var(--gold-500)]">Package Inclusions:</h3>
-                    <ul className="space-y-1">
-                      {offer.perks.map((perk, index) => (
-                        <li key={index} className="flex items-center text-gray-600">
-                          <span className="mr-2 text-[var(--gold-400)]">✓</span>
-                          {perk}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-
-                <div className="mb-4">
-                  <h3 className="font-semibold mb-2 text-[var(--gold-500)]">Terms & Conditions:</h3>
-                  <ul className="space-y-1">
-                    {offer.terms.map((term, index) => (
-                      <li key={index} className="text-sm text-gray-600">
-                        <span className="text-[var(--gold-400)]">•</span> {term}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="flex items-center justify-between mt-6">
-                  <div>
-                    <p className="text-sm text-gray-500">Promo Code</p>
-                    <p className="font-mono font-bold text-lg text-[var(--gold-400)]">{offer.code}</p>
-                  </div>
-                  <button className="btn-gold px-6 py-3 rounded-md">
-                    Book Now
-                  </button>
-                </div>
-              </div>
-            </div>
-          ))}
+        <div className="bg-white rounded-lg shadow-lg p-8 max-w-2xl mx-auto text-center">
+          <div className="w-16 h-16 mx-auto mb-6 bg-[var(--gold-50)] rounded-full flex items-center justify-center">
+            <svg className="w-8 h-8 text-[var(--gold-400)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h2 className="text-2xl font-bold mb-4 text-[var(--gold-400)]">No Current Offers</h2>
+          <p className="text-gray-600 mb-6">
+            We are currently updating our special offers. Please check back later for new exciting deals and packages.
+          </p>
+          <p className="text-gray-500 text-sm">
+            For room rates and availability, please visit our <a href="/rooms" className="text-[var(--gold-400)] hover:underline">Rooms & Suites</a> page.
+          </p>
         </div>
 
         {/* Newsletter Section */}
-        <div className="mt-16 bg-[var(--gold-50)] rounded-lg p-8 text-center">
+        <div className="mt-16 bg-[var(--gold-50)] rounded-lg p-8 text-center max-w-2xl mx-auto">
           <h2 className="text-2xl font-bold mb-4 text-[var(--gold-400)]">Stay Updated</h2>
           <p className="text-gray-600 mb-6">
-            Subscribe to our newsletter to receive exclusive offers and updates.
+            Subscribe to our newsletter to be the first to know about our upcoming offers and promotions.
           </p>
           <div className="max-w-md mx-auto flex gap-4">
             <input
